@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>jobsy.it - design system styleguide</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <style>
+      :root{
+        --jobsy-50:#fff9e6;
+        --jobsy-100:#fdeebf;
+        --jobsy-200:#fbdd86;
+        --jobsy-300:#f8c93f;
+        --jobsy-400:#f4b81b;
+        --jobsy-500:#e6a510;
+        --jobsy-600:#c4850b;
+        --jobsy-700:#9c660c;
+        --jobsy-800:#7e5111;
+        --jobsy-900:#6a4413;
+        --jobsy-950:#3d2507;
+        --jobsy-orange:#fc6600;
+        --jobsy-ink:#181716;
+        --logo-graphite:#191919;
+        --logo-gray:#7c7c7c;
+        --logo-silver:#d3d3d3;
+        --jobsy-font-sans:"Inter",system-ui,sans-serif;
+        --jobsy-font-display:"Sora","Inter",system-ui,sans-serif;
+        --jobsy-radius-sm:.375rem;
+        --jobsy-radius:.625rem;
+        --jobsy-radius-lg:1rem;
+        --bg:#fafafb;
+        --surface:#fff;
+        --elevated:#f1f5f9;
+        --text:#181716;
+        --muted:#64748b;
+        --border:#e6e8ec;
+        --primary:var(--jobsy-500);
+        --primary-hover:var(--jobsy-600);
+        --on-primary:var(--jobsy-ink);
+        --action:#e0640a;
+        --action-hover:#c4560a;
+        --on-action:#fff;
+        --positive:#16a34a;
+      }
+      .dark{
+        --bg:#16202e;
+        --surface:#1c2838;
+        --elevated:#243449;
+        --text:#f1f5f9;
+        --muted:#94a3b8;
+        --border:#2c3e54;
+        --primary:var(--jobsy-400);
+        --primary-hover:var(--jobsy-300);
+        --on-primary:var(--jobsy-ink);
+        --action:#f5801f;
+        --action-hover:#e0640a;
+        --on-action:#fff;
+        --positive:#4ade80;
+      }
+
+      .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--jobsy-font-sans);font-weight:600;font-size:.875rem;line-height:1;padding:.625rem 1rem;border:1px solid transparent;border-radius:var(--jobsy-radius);cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
+      .btn-action{background:var(--action);color:var(--on-action)}.btn-action:hover{background:var(--action-hover)}
+      .btn-ink{background:var(--jobsy-ink);color:#fff}.dark .btn-ink{background:#fff;color:var(--jobsy-ink)}
+      .btn-outline{background:transparent;color:var(--text);border-color:var(--border)}.btn-outline:hover{background:var(--elevated)}
+      .tag{display:inline-flex;align-items:center;font-family:var(--jobsy-font-sans);font-weight:500;font-size:.8125rem;padding:.1875rem .5rem;border-radius:var(--jobsy-radius-sm);color:var(--jobsy-700);border:1px solid color-mix(in srgb,var(--jobsy-500) 45%,transparent);background:color-mix(in srgb,var(--jobsy-500) 7%,transparent)}
+      .dark .tag{color:var(--jobsy-300);border-color:color-mix(in srgb,var(--jobsy-400) 40%,transparent);background:color-mix(in srgb,var(--jobsy-400) 8%,transparent)}
+      .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--jobsy-radius-lg)}
+
+      *{box-sizing:border-box}
+      body{margin:0;background:var(--bg);color:var(--text);font-family:var(--jobsy-font-sans);transition:background .2s,color .2s}
+      .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:1px solid var(--border);background:var(--surface)}
+      .brand{display:flex;align-items:baseline;gap:14px}
+      .wordmark{font-family:var(--jobsy-font-display);font-weight:800;font-size:22px;letter-spacing:-.02em}
+      .wordmark .dot{color:var(--action)}
+      .tagline{color:var(--muted);font-size:14px}
+      .nav{display:flex;align-items:center;gap:18px}
+      .nav a{color:var(--text);text-decoration:none;font-size:14px}
+      .toggle{background:var(--elevated);border:1px solid var(--border);color:var(--text);border-radius:99px;padding:6px 12px;font-size:13px;cursor:pointer;font-family:inherit}
+      .wrap{max-width:900px;margin:0 auto;padding:36px 28px 64px}
+      h2{font-family:var(--jobsy-font-display);font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:36px 0 14px;font-weight:600}
+      .swatches{display:grid;grid-template-columns:repeat(11,1fr);gap:6px}
+      .sw{height:54px;border-radius:8px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:4px;font-size:10px;font-weight:600;border:1px solid color-mix(in srgb,var(--text) 8%,transparent)}
+      .swrow{display:flex;gap:8px;flex-wrap:wrap}
+      .swrow .sw{width:118px;height:60px}
+      .swrow .sw small{font-weight:400;opacity:.8;font-size:9px}
+      .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
+      .demo{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
+      code,.u{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--muted)}
+      .u{background:var(--elevated);padding:1px 6px;border-radius:4px}
+      .hint{color:var(--muted);font-size:12px;margin:6px 0 0}
+      .usage{background:var(--surface);border:1px solid var(--border);border-radius:var(--jobsy-radius-lg);padding:16px 18px;font-size:13px;line-height:1.7;overflow:auto}
+      .usage pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
+      .note{margin-top:46px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px}
+      .note code{background:var(--elevated);padding:1px 5px;border-radius:4px}
+    </style>
+  </head>
+  <body>
+    <div class="topbar">
+      <div class="brand">
+        <span class="tagline">jobsy.it - design system</span>
+      </div>
+      <div class="nav">
+        <a href="#usage">Usage</a>
+        <button class="toggle" id="toggle">Light / Dark</button>
+      </div>
+    </div>
+    <div class="wrap">
+
+      <h2>1. Brand scale: jobsy amber</h2>
+      <div class="swatches">
+        <div class="sw" style="background:var(--jobsy-50);color:#7a5a00">50</div>
+        <div class="sw" style="background:var(--jobsy-100);color:#7a5a00">100</div>
+        <div class="sw" style="background:var(--jobsy-200);color:#7a5a00">200</div>
+        <div class="sw" style="background:var(--jobsy-300);color:#3d2507">300</div>
+        <div class="sw" style="background:var(--jobsy-400);color:#3d2507">400</div>
+        <div class="sw" style="background:var(--jobsy-500);color:#fff">500</div>
+        <div class="sw" style="background:var(--jobsy-600);color:#fff">600</div>
+        <div class="sw" style="background:var(--jobsy-700);color:#fff">700</div>
+        <div class="sw" style="background:var(--jobsy-800);color:#fff">800</div>
+        <div class="sw" style="background:var(--jobsy-900);color:#fff">900</div>
+        <div class="sw" style="background:var(--jobsy-950);color:#fff">950</div>
+      </div>
+      <p class="hint">Tailwind: <span class="u">bg-jobsy-500</span> <span class="u">text-jobsy-700</span> - Nuxt UI primary: <span class="u">jobsy</span></p>
+
+      <h2>2. Action &amp; status</h2>
+      <div class="swrow">
+        <div class="sw" style="background:var(--jobsy-orange);color:#fff">orange<small>#fc6600 raw</small></div>
+        <div class="sw" style="background:var(--action);color:#fff">action<small>bg-action</small></div>
+        <div class="sw" style="background:var(--positive);color:#fff">positive<small>text-positive</small></div>
+        <div class="sw" style="background:var(--jobsy-ink);color:#fff">ink<small>bg-ink</small></div>
+        <div class="sw" style="background:#fff;color:#181716">white<small>--surface</small></div>
+      </div>
+
+      <h2>3. Surfaces &amp; neutrals (change with the theme - toggle!)</h2>
+      <div class="swrow">
+        <div class="sw" style="background:var(--bg);color:var(--text)">bg</div>
+        <div class="sw" style="background:var(--surface);color:var(--text)">surface</div>
+        <div class="sw" style="background:var(--elevated);color:var(--text)">elevated</div>
+        <div class="sw" style="background:var(--border);color:var(--text)">border</div>
+        <div class="sw" style="background:var(--muted);color:#fff">muted</div>
+        <div class="sw" style="background:var(--text);color:var(--bg)">text</div>
+      </div>
+      <p class="hint">Web: use Nuxt UI semantics (<span class="u">bg-default</span> <span class="u">text-muted</span>). Extension: <span class="u">bg-[var(--surface)]</span> or the raw variables.</p>
+
+      <h2>4. Mono logo (grayscale version)</h2>
+      <div class="swrow">
+        <div class="sw" style="background:var(--logo-graphite);color:#fff">graphite<small>#191919</small></div>
+        <div class="sw" style="background:var(--logo-gray);color:#fff">gray<small>#7c7c7c</small></div>
+        <div class="sw" style="background:var(--logo-silver);color:#181716">silver<small>#d3d3d3</small></div>
+      </div>
+      <p class="hint">Render the mono logo in a single color (currentColor) so it picks ink on light / silver on dark.</p>
+
+      <h2>5. Components (and their Tailwind classes)</h2>
+      <div class="row" style="gap:28px">
+        <div class="demo"><button class="btn btn-ink">Post a job</button><span class="u">bg-ink text-white rounded-jobsy</span></div>
+        <div class="demo"><button class="btn btn-action">Apply</button><span class="u">bg-action text-white rounded-jobsy</span></div>
+        <div class="demo"><button class="btn btn-outline">Save</button><span class="u">border border-default text-default</span></div>
+        <div class="demo"><span class="tag">React.js</span><span class="u">text-jobsy-700 border-jobsy-500/45</span></div>
+      </div>
+
+      <h2>6. Card &amp; typography</h2>
+      <div class="card" style="padding:24px;max-width:560px">
+        <p>
+          <span style="font-family:var(--jobsy-font-display);font-size:24px;font-weight:800;letter-spacing:-.02em">
+            Display heading - Sora
+          </span>
+          <span class="u">font-display</span>
+        </p>
+        <p>
+          <span style="font-size:16px;line-height:1.6;margin:12px 0 0">
+            Body text in Inter - the default for descriptions and longer content. Comfortable line-height, neutral weight.
+          </span>
+          <span class="u">font-sans</span>
+        </p>
+        <p>
+          <span style="font-size:12px;color:var(--muted);margin:12px 0 0">
+            Caption / note - small summary.
+          </span>
+          <span class="u">text-xs text-muted</span>
+        </p>
+        <div class="row" style="margin-top:20px">
+          <button class="btn btn-action">Action</button>
+          <button class="btn btn-outline">Secondary</button>
+        </div>
+      </div>
+
+      <h2 id="usage">Usage</h2>
+      <div class="usage">
+<pre>/* web (Nuxt UI) - main.css */
+@import "tailwindcss";
+@import "@nuxt/ui";
+@import "@jobsy-it/design/theme.css";
+
+/* other - style.css */
+@import "tailwindcss";
+@import "@jobsy-it/design/theme.css";
+
+// Build buttons with utilities on the shared tokens:
+// &lt;button class="bg-action text-white rounded-jobsy px-4 py-2 font-semibold"&gt;Apply&lt;/button&gt;
+// Dark mode: add the .dark class on &lt;html&gt;</pre>
+      </div>
+    </div>
+    <script>
+      document.getElementById('toggle').addEventListener('click', () => document.documentElement.classList.toggle('dark'));
+    </script>
+  </body>
+</html>
