@@ -13,16 +13,18 @@
       .btn-action{background:var(--action);color:var(--on-action)}.btn-action:hover{background:var(--action-hover)}
       .btn-ink{background:var(--jobsy-ink);color:#fff}.dark .btn-ink{background:#fff;color:var(--jobsy-ink)}
       .btn-outline{background:transparent;color:var(--text);border-color:var(--border)}.btn-outline:hover{background:var(--elevated)}
-      .tag{display:inline-flex;align-items:center;font-family:var(--jobsy-font-sans);font-weight:500;font-size:.8125rem;padding:.1875rem .5rem;border-radius:var(--jobsy-radius-sm);color:var(--jobsy-700);border:1px solid color-mix(in srgb,var(--jobsy-500) 45%,transparent);background:color-mix(in srgb,var(--jobsy-500) 7%,transparent)}
-      .dark .tag{color:var(--jobsy-300);border-color:color-mix(in srgb,var(--jobsy-400) 40%,transparent);background:color-mix(in srgb,var(--jobsy-400) 8%,transparent)}
+      .badge{display:inline-flex;align-items:center;font-family:var(--jobsy-font-sans);font-weight:500;font-size:.8125rem;padding:.1875rem .5rem;border-radius:var(--jobsy-radius-sm);color:var(--jobsy-700);border:1px solid color-mix(in srgb,var(--jobsy-500) 45%,transparent);background:color-mix(in srgb,var(--jobsy-500) 7%,transparent)}
+      .badge.positive{background:color-mix(in srgb,var(--positive)10%,transparent);color:var(--positive);border:1px solid color-mix(in srgb,var(--positive) 45%,transparent);}
+      .badge.negative{background:var(--negative);color:var(--surface);border:1px solid color-mix(in srgb,var(--negative) 45%,transparent);}
+      .dark .badge{color:var(--jobsy-300);border-color:color-mix(in srgb,var(--jobsy-400) 40%,transparent);background:color-mix(in srgb,var(--jobsy-400) 8%,transparent)}
+      .dark .badge.positive{color:var(--positive);border:1px solid color-mix(in srgb,var(--positive) 45%,transparent);}
+      .dark .badge.negative{color:color-mix(in srgb,var(--negative)90%,transparent);border:1px solid color-mix(in srgb,var(--negative) 55%,transparent);}
       .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--jobsy-radius-lg)}
 
       *{box-sizing:border-box}
       body{margin:0;background:var(--bg);color:var(--text);font-family:var(--jobsy-font-sans);transition:background .2s,color .2s}
       .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:1px solid var(--border);background:var(--surface)}
       .brand{display:flex;align-items:baseline;gap:14px}
-      .wordmark{font-family:var(--jobsy-font-display);font-weight:800;font-size:22px;letter-spacing:-.02em}
-      .wordmark .dot{color:var(--action)}
       .tagline{color:var(--muted);font-size:14px}
       .nav{display:flex;align-items:center;gap:18px}
       .nav a{color:var(--text);text-decoration:none;font-size:14px}
@@ -41,14 +43,13 @@
       .hint{color:var(--muted);font-size:12px;margin:6px 0 0}
       .usage{background:var(--surface);border:1px solid var(--border);border-radius:var(--jobsy-radius-lg);padding:16px 18px;font-size:13px;line-height:1.7;overflow:auto}
       .usage pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
-      .note{margin-top:46px;font-size:12px;color:var(--muted);border-top:1px solid var(--border);padding-top:16px}
       .note code{background:var(--elevated);padding:1px 5px;border-radius:4px}
     </style>
   </head>
   <body>
     <div class="topbar">
       <div class="brand">
-        <span class="tagline">jobsy.it - design system</span>
+        <span class="tagline">jobsy.it - new design system</span>
       </div>
       <div class="nav">
         <a href="#usage">Usage</a>
@@ -57,7 +58,7 @@
     </div>
     <div class="wrap">
 
-      <h2>1. Brand scale: jobsy amber</h2>
+      <h2>1. Brand scale: amber</h2>
       <div class="swatches">
         <div class="sw" style="background:var(--jobsy-50);color:#7a5a00">50</div>
         <div class="sw" style="background:var(--jobsy-100);color:#7a5a00">100</div>
@@ -71,7 +72,7 @@
         <div class="sw" style="background:var(--jobsy-900);color:#fff">900</div>
         <div class="sw" style="background:var(--jobsy-950);color:#fff">950</div>
       </div>
-      <p class="hint">Tailwind: <span class="u">bg-jobsy-500</span> <span class="u">text-jobsy-700</span> - Nuxt UI primary: <span class="u">jobsy</span></p>
+      <p class="hint">Tailwind: <span class="u">bg-jobsy-500</span> <span class="u">text-jobsy-700</span></p>
 
       <h2>2. Action &amp; status</h2>
       <div class="swrow">
@@ -103,10 +104,12 @@
 
       <h2>5. Components (and their Tailwind classes)</h2>
       <div class="row" style="gap:28px">
-        <div class="demo"><button class="btn btn-ink">Post a job</button><span class="u">bg-ink text-white rounded-jobsy</span></div>
-        <div class="demo"><button class="btn btn-action">Apply</button><span class="u">bg-action text-white rounded-jobsy</span></div>
+        <div class="demo"><button class="btn btn-ink">Post a job</button><span class="u">bg-ink text-white</span></div>
+        <div class="demo"><button class="btn btn-action">Apply</button><span class="u">bg-action text-white</span></div>
         <div class="demo"><button class="btn btn-outline">Save</button><span class="u">border border-default text-default</span></div>
-        <div class="demo"><span class="tag">React.js</span><span class="u">text-jobsy-700 border-jobsy-500/45</span></div>
+        <div class="demo"><span class="badge">vue.js</span><span class="u">text-jobsy-700 border-jobsy-500/45</span></div>
+        <div class="demo"><span class="badge positive">new</span><span class="u">text-positive border-positive</span></div>
+        <div class="demo"><span class="badge negative">draft</span><span class="u">text-negative border-negative</span></div>
       </div>
 
       <h2>6. Card &amp; typography</h2>
@@ -122,6 +125,12 @@
             Body text in Inter - the default for descriptions and longer content. Comfortable line-height, neutral weight.
           </span>
           <span class="u">font-sans</span>
+        </p>
+        <p>
+          <span style="color:var(--positive);font-weight:600;font-size:14px">
+            130 - 160 PLN <span style="color:var(--muted);font-weight:400">net/h, B2B</span>
+          </span>
+          <span class="u">text-positive</span>
         </p>
         <p>
           <span style="font-size:12px;color:var(--muted);margin:12px 0 0">
@@ -147,7 +156,7 @@
 @import "@jobsy-it/design/theme.css";
 
 // Build buttons with utilities on the shared tokens:
-// &lt;button class="bg-action text-white rounded-jobsy px-4 py-2 font-semibold"&gt;Apply&lt;/button&gt;
+// &lt;button class="bg-action text-white px-4 py-2 font-semibold"&gt;Apply&lt;/button&gt;
 // Dark mode: add the .dark class on &lt;html&gt;</pre>
       </div>
     </div>

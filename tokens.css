@@ -14,15 +14,15 @@
   --jobsy-200: #fbdd86;
   --jobsy-300: #f8c93f;
   --jobsy-400: #f4b81b;
-  --jobsy-500: #e6a510; // Brand base
+  --jobsy-500: #e6a510; /* Brand base */
   --jobsy-600: #c4850b;
   --jobsy-700: #9c660c;
   --jobsy-800: #7e5111;
   --jobsy-900: #6a4413;
   --jobsy-950: #3d2507;
 
-  --jobsy-orange: #fc6600; // Logo duck orange
-  --jobsy-ink: #181716; // Logo black
+  --jobsy-orange: #fc6600; /* Logo duck orange */
+  --jobsy-ink: #181716; /* Logo black */
 
   --logo-graphite: #191919;
   --logo-gray: #7c7c7c;
@@ -51,6 +51,7 @@
   --on-action: #ffffff;
 
   --positive: #16a34a;
+  --negative: #ff0000;
 }
 
 .dark {
