@@ -1,0 +1,13 @@
+{
+  "name": "jobsy-it/design",
+  "version": "1.0.0",
+  "private": false,
+  "exports": {
+    "./tokens.css": "./tokens.css",
+    "./theme.css": "./theme.css"
+  },
+  "files": [
+    "tokens.css",
+    "theme.css"
+  ]
+}
