@@ -1,0 +1,28 @@
+/**
+ * jobsy-it/design — Tailwind v4 registration
+ *
+ * Turns the raw tokens (tokens.css) into Tailwind utilities + Nuxt UI colors.
+ */
+@import "./tokens.css";
+
+@theme inline {
+  --color-jobsy-50: var(--jobsy-50);
+  --color-jobsy-100: var(--jobsy-100);
+  --color-jobsy-200: var(--jobsy-200);
+  --color-jobsy-300: var(--jobsy-300);
+  --color-jobsy-400: var(--jobsy-400);
+  --color-jobsy-500: var(--jobsy-500);
+  --color-jobsy-600: var(--jobsy-600);
+  --color-jobsy-700: var(--jobsy-700);
+  --color-jobsy-800: var(--jobsy-800);
+  --color-jobsy-900: var(--jobsy-900);
+  --color-jobsy-950: var(--jobsy-950);
+
+  --color-ink: var(--jobsy-ink);
+  --color-action: var(--action);
+  --color-success: var(--success);
+
+  --font-sans: var(--jobsy-font-sans);
+  --font-display: var(--jobsy-font-display);
+  --radius-jobsy: var(--jobsy-radius);
+}
