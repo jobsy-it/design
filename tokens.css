@@ -1,0 +1,73 @@
+/**
+ * jobsy.it - design tokens
+ *
+ * Plain CSS variables. Consumed by the Nuxt app (theme.css → Tailwind v4 Nuxt UI), the Chrome extension (plain HTML), and anything else.
+ *
+ * Layers:
+ * 1. Brand scale (amber) - fixed palette, used by Nuxt UI
+ * 2. Fixed brand colors - orange accent, ink, mono-logo grays
+ * 3. Semantic tokens (light/dark) - flip with the .dark class
+ */
+:root {
+  --jobsy-50: #fff9e6;
+  --jobsy-100: #fdeebf;
+  --jobsy-200: #fbdd86;
+  --jobsy-300: #f8c93f;
+  --jobsy-400: #f4b81b;
+  --jobsy-500: #e6a510; // Brand base
+  --jobsy-600: #c4850b;
+  --jobsy-700: #9c660c;
+  --jobsy-800: #7e5111;
+  --jobsy-900: #6a4413;
+  --jobsy-950: #3d2507;
+
+  --jobsy-orange: #fc6600; // Logo duck orange
+  --jobsy-ink: #181716; // Logo black
+
+  --logo-graphite: #191919;
+  --logo-gray: #7c7c7c;
+  --logo-silver: #d3d3d3;
+
+  --jobsy-font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --jobsy-font-display: "Sora", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  --jobsy-radius-sm: 0.375rem;
+  --jobsy-radius: 0.625rem;
+  --jobsy-radius-lg: 1rem;
+
+  --bg: #fafafb;
+  --surface: #ffffff;
+  --elevated: #f1f5f9;
+  --text: #181716;
+  --muted: #64748b;
+  --border: #e6e8ec;
+
+  --primary: var(--jobsy-500);
+  --primary-hover: var(--jobsy-600);
+  --on-primary: var(--jobsy-ink);
+
+  --action: #e0640a;
+  --action-hover: #c4560a;
+  --on-action: #ffffff;
+
+  --positive: #16a34a;
+}
+
+.dark {
+  --bg: #16202e;
+  --surface: #1c2838;
+  --elevated: #243449;
+  --text: #f1f5f9;
+  --muted: #94a3b8;
+  --border: #2c3e54;
+
+  --primary: var(--jobsy-400);
+  --primary-hover: var(--jobsy-300);
+  --on-primary: var(--jobsy-ink);
+
+  --action: #f5801f;
+  --action-hover: #e0640a;
+  --on-action: #ffffff;
+
+  --positive: #4ade80;
+}
