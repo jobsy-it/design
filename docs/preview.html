@@ -7,59 +7,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../tokens.css">
     <style>
-      :root{
-        --jobsy-50:#fff9e6;
-        --jobsy-100:#fdeebf;
-        --jobsy-200:#fbdd86;
-        --jobsy-300:#f8c93f;
-        --jobsy-400:#f4b81b;
-        --jobsy-500:#e6a510;
-        --jobsy-600:#c4850b;
-        --jobsy-700:#9c660c;
-        --jobsy-800:#7e5111;
-        --jobsy-900:#6a4413;
-        --jobsy-950:#3d2507;
-        --jobsy-orange:#fc6600;
-        --jobsy-ink:#181716;
-        --logo-graphite:#191919;
-        --logo-gray:#7c7c7c;
-        --logo-silver:#d3d3d3;
-        --jobsy-font-sans:"Inter",system-ui,sans-serif;
-        --jobsy-font-display:"Sora","Inter",system-ui,sans-serif;
-        --jobsy-radius-sm:.375rem;
-        --jobsy-radius:.625rem;
-        --jobsy-radius-lg:1rem;
-        --bg:#fafafb;
-        --surface:#fff;
-        --elevated:#f1f5f9;
-        --text:#181716;
-        --muted:#64748b;
-        --border:#e6e8ec;
-        --primary:var(--jobsy-500);
-        --primary-hover:var(--jobsy-600);
-        --on-primary:var(--jobsy-ink);
-        --action:#e0640a;
-        --action-hover:#c4560a;
-        --on-action:#fff;
-        --positive:#16a34a;
-      }
-      .dark{
-        --bg:#16202e;
-        --surface:#1c2838;
-        --elevated:#243449;
-        --text:#f1f5f9;
-        --muted:#94a3b8;
-        --border:#2c3e54;
-        --primary:var(--jobsy-400);
-        --primary-hover:var(--jobsy-300);
-        --on-primary:var(--jobsy-ink);
-        --action:#f5801f;
-        --action-hover:#e0640a;
-        --on-action:#fff;
-        --positive:#4ade80;
-      }
-
       .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--jobsy-font-sans);font-weight:600;font-size:.875rem;line-height:1;padding:.625rem 1rem;border:1px solid transparent;border-radius:var(--jobsy-radius);cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
       .btn-action{background:var(--action);color:var(--on-action)}.btn-action:hover{background:var(--action-hover)}
       .btn-ink{background:var(--jobsy-ink);color:#fff}.dark .btn-ink{background:#fff;color:var(--jobsy-ink)}
