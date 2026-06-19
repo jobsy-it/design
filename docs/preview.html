@@ -11,14 +11,11 @@
     <style>
       .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--jobsy-font-sans);font-weight:600;font-size:.875rem;line-height:1;padding:.625rem 1rem;border:1px solid transparent;border-radius:var(--jobsy-radius);cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
       .btn-action{background:var(--action);color:var(--on-action)}.btn-action:hover{background:var(--action-hover)}
-      .btn-ink{background:var(--jobsy-ink);color:#fff}.dark .btn-ink{background:#fff;color:var(--jobsy-ink)}
+      .btn-ink{background:var(--jobsy-ink);color:#fff}
       .btn-outline{background:transparent;color:var(--text);border-color:var(--border)}.btn-outline:hover{background:var(--elevated)}
       .badge{display:inline-flex;align-items:center;font-family:var(--jobsy-font-sans);font-weight:500;font-size:.8125rem;padding:.1875rem .5rem;border-radius:var(--jobsy-radius-sm);color:var(--jobsy-700);border:1px solid color-mix(in srgb,var(--jobsy-500) 45%,transparent);background:color-mix(in srgb,var(--jobsy-500) 7%,transparent)}
       .badge.positive{background:color-mix(in srgb,var(--positive)10%,transparent);color:var(--positive);border:1px solid color-mix(in srgb,var(--positive) 45%,transparent);}
       .badge.negative{background:var(--negative);color:var(--surface);border:1px solid color-mix(in srgb,var(--negative) 45%,transparent);}
-      .dark .badge{color:var(--jobsy-300);border-color:color-mix(in srgb,var(--jobsy-400) 40%,transparent);background:color-mix(in srgb,var(--jobsy-400) 8%,transparent)}
-      .dark .badge.positive{color:var(--positive);border:1px solid color-mix(in srgb,var(--positive) 45%,transparent);}
-      .dark .badge.negative{color:color-mix(in srgb,var(--negative)90%,transparent);border:1px solid color-mix(in srgb,var(--negative) 55%,transparent);}
       .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--jobsy-radius-lg)}
 
       *{box-sizing:border-box}
@@ -28,7 +25,6 @@
       .tagline{color:var(--muted);font-size:14px}
       .nav{display:flex;align-items:center;gap:18px}
       .nav a{color:var(--text);text-decoration:none;font-size:14px}
-      .toggle{background:var(--elevated);border:1px solid var(--border);color:var(--text);border-radius:99px;padding:6px 12px;font-size:13px;cursor:pointer;font-family:inherit}
       .wrap{max-width:900px;margin:0 auto;padding:36px 28px 64px}
       h2{font-family:var(--jobsy-font-display);font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:36px 0 14px;font-weight:600}
       .swatches{display:grid;grid-template-columns:repeat(11,1fr);gap:6px}
@@ -53,7 +49,6 @@
       </div>
       <div class="nav">
         <a href="#usage">Usage</a>
-        <button class="toggle" id="toggle">Light / Dark</button>
       </div>
     </div>
     <div class="wrap">
@@ -83,7 +78,7 @@
         <div class="sw" style="background:#fff;color:#181716">white<small>--surface</small></div>
       </div>
 
-      <h2>3. Surfaces &amp; neutrals (change with the theme - toggle!)</h2>
+      <h2>3. Surfaces &amp; neutrals</h2>
       <div class="swrow">
         <div class="sw" style="background:var(--bg);color:var(--text)">bg</div>
         <div class="sw" style="background:var(--surface);color:var(--text)">surface</div>
@@ -156,12 +151,8 @@
 @import "@jobsy-it/design/theme.css";
 
 // Build buttons with utilities on the shared tokens:
-// &lt;button class="bg-action text-white px-4 py-2 font-semibold"&gt;Apply&lt;/button&gt;
-// Dark mode: add the .dark class on &lt;html&gt;</pre>
+// &lt;button class="bg-action text-white px-4 py-2 font-semibold"&gt;Apply&lt;/button&gt;</pre>
       </div>
     </div>
-    <script>
-      document.getElementById('toggle').addEventListener('click', () => document.documentElement.classList.toggle('dark'));
-    </script>
   </body>
 </html>
