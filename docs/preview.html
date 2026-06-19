@@ -7,152 +7,99 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../tokens.css">
-    <style>
-      .btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;font-family:var(--jobsy-font-sans);font-weight:600;font-size:.875rem;line-height:1;padding:.625rem 1rem;border:1px solid transparent;border-radius:var(--jobsy-radius);cursor:pointer;transition:background-color .15s,color .15s,border-color .15s}
-      .btn-action{background:var(--action);color:var(--on-action)}.btn-action:hover{background:var(--action-hover)}
-      .btn-ink{background:var(--jobsy-ink);color:#fff}
-      .btn-outline{background:transparent;color:var(--text);border-color:var(--border)}.btn-outline:hover{background:var(--elevated)}
-      .badge{display:inline-flex;align-items:center;font-family:var(--jobsy-font-sans);font-weight:500;font-size:.8125rem;padding:.1875rem .5rem;border-radius:var(--jobsy-radius-sm);color:var(--jobsy-700);border:1px solid color-mix(in srgb,var(--jobsy-500) 45%,transparent);background:color-mix(in srgb,var(--jobsy-500) 7%,transparent)}
-      .badge.positive{background:color-mix(in srgb,var(--positive)10%,transparent);color:var(--positive);border:1px solid color-mix(in srgb,var(--positive) 45%,transparent);}
-      .badge.negative{background:var(--negative);color:var(--surface);border:1px solid color-mix(in srgb,var(--negative) 45%,transparent);}
-      .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--jobsy-radius-lg)}
-
-      *{box-sizing:border-box}
-      body{margin:0;background:var(--bg);color:var(--text);font-family:var(--jobsy-font-sans);transition:background .2s,color .2s}
-      .topbar{display:flex;align-items:center;justify-content:space-between;padding:16px 28px;border-bottom:1px solid var(--border);background:var(--surface)}
-      .brand{display:flex;align-items:baseline;gap:14px}
-      .tagline{color:var(--muted);font-size:14px}
-      .nav{display:flex;align-items:center;gap:18px}
-      .nav a{color:var(--text);text-decoration:none;font-size:14px}
-      .wrap{max-width:900px;margin:0 auto;padding:36px 28px 64px}
-      h2{font-family:var(--jobsy-font-display);font-size:12px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin:36px 0 14px;font-weight:600}
-      .swatches{display:grid;grid-template-columns:repeat(11,1fr);gap:6px}
-      .sw{height:54px;border-radius:8px;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;padding-bottom:4px;font-size:10px;font-weight:600;border:1px solid color-mix(in srgb,var(--text) 8%,transparent)}
-      .swrow{display:flex;gap:8px;flex-wrap:wrap}
-      .swrow .sw{width:118px;height:60px}
-      .swrow .sw small{font-weight:400;opacity:.8;font-size:9px}
-      .row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}
-      .demo{display:flex;flex-direction:column;gap:6px;align-items:flex-start}
-      code,.u{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12px;color:var(--muted)}
-      .u{background:var(--elevated);padding:1px 6px;border-radius:4px}
-      .hint{color:var(--muted);font-size:12px;margin:6px 0 0}
-      .usage{background:var(--surface);border:1px solid var(--border);border-radius:var(--jobsy-radius-lg);padding:16px 18px;font-size:13px;line-height:1.7;overflow:auto}
-      .usage pre{margin:0;white-space:pre-wrap;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:12.5px}
-      .note code{background:var(--elevated);padding:1px 5px;border-radius:4px}
-    </style>
+    <link rel="stylesheet" href="../dist/jobsy.css">
   </head>
-  <body>
-    <div class="topbar">
-      <div class="brand">
-        <span class="tagline">jobsy.it - new design system</span>
-      </div>
-      <div class="nav">
-        <a href="#usage">Usage</a>
-      </div>
+  <body class="m-0 bg-[var(--bg)] text-[var(--text)] font-sans">
+
+    <div class="flex items-center justify-between px-7 py-4 border-b border-[var(--border)] bg-[var(--surface)]">
+      <span class="font-display text-[22px] font-extrabold tracking-tight">jobsy.it <span class="text-[var(--muted)] text-sm font-normal">design system</span></span>
+      <a href="#usage" class="text-sm text-[var(--text)] no-underline">Usage</a>
     </div>
-    <div class="wrap">
 
-      <h2>1. Brand scale: amber</h2>
-      <div class="swatches">
-        <div class="sw" style="background:var(--jobsy-50);color:#7a5a00">50</div>
-        <div class="sw" style="background:var(--jobsy-100);color:#7a5a00">100</div>
-        <div class="sw" style="background:var(--jobsy-200);color:#7a5a00">200</div>
-        <div class="sw" style="background:var(--jobsy-300);color:#3d2507">300</div>
-        <div class="sw" style="background:var(--jobsy-400);color:#3d2507">400</div>
-        <div class="sw" style="background:var(--jobsy-500);color:#fff">500</div>
-        <div class="sw" style="background:var(--jobsy-600);color:#fff">600</div>
-        <div class="sw" style="background:var(--jobsy-700);color:#fff">700</div>
-        <div class="sw" style="background:var(--jobsy-800);color:#fff">800</div>
-        <div class="sw" style="background:var(--jobsy-900);color:#fff">900</div>
-        <div class="sw" style="background:var(--jobsy-950);color:#fff">950</div>
+    <div class="max-w-[900px] mx-auto px-7 pt-9 pb-16">
+
+      <h2 class="font-display text-xs uppercase tracking-wider text-[var(--muted)] mt-9 mb-3.5 font-semibold">1. Brand scale: jobsy amber</h2>
+      <div class="grid grid-cols-11 gap-1.5">
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-50 text-[#7a5a00]">50</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-100 text-[#7a5a00]">100</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-200 text-[#7a5a00]">200</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-300 text-[#3d2507]">300</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-400 text-[#3d2507]">400</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-500 text-white">500</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-600 text-white">600</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-700 text-white">700</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-800 text-white">800</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-900 text-white">900</div>
+        <div class="h-14 rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-jobsy-950 text-white">950</div>
       </div>
-      <p class="hint">Tailwind: <span class="u">bg-jobsy-500</span> <span class="u">text-jobsy-700</span></p>
+      <p class="text-xs text-[var(--muted)] mt-1.5">Tailwind: <code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">bg-jobsy-500</code> <code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">text-jobsy-700</code> - Nuxt UI primary: <code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">jobsy</code></p>
 
-      <h2>2. Action &amp; status</h2>
-      <div class="swrow">
-        <div class="sw" style="background:var(--jobsy-orange);color:#fff">orange<small>#fc6600 raw</small></div>
-        <div class="sw" style="background:var(--action);color:#fff">action<small>bg-action</small></div>
-        <div class="sw" style="background:var(--positive);color:#fff">positive<small>text-positive</small></div>
-        <div class="sw" style="background:var(--jobsy-ink);color:#fff">ink<small>bg-ink</small></div>
-        <div class="sw" style="background:#fff;color:#181716">white<small>--surface</small></div>
-      </div>
-
-      <h2>3. Surfaces &amp; neutrals</h2>
-      <div class="swrow">
-        <div class="sw" style="background:var(--bg);color:var(--text)">bg</div>
-        <div class="sw" style="background:var(--surface);color:var(--text)">surface</div>
-        <div class="sw" style="background:var(--elevated);color:var(--text)">elevated</div>
-        <div class="sw" style="background:var(--border);color:var(--text)">border</div>
-        <div class="sw" style="background:var(--muted);color:#fff">muted</div>
-        <div class="sw" style="background:var(--text);color:var(--bg)">text</div>
-      </div>
-      <p class="hint">Web: use Nuxt UI semantics (<span class="u">bg-default</span> <span class="u">text-muted</span>). Extension: <span class="u">bg-[var(--surface)]</span> or the raw variables.</p>
-
-      <h2>4. Mono logo (grayscale version)</h2>
-      <div class="swrow">
-        <div class="sw" style="background:var(--logo-graphite);color:#fff">graphite<small>#191919</small></div>
-        <div class="sw" style="background:var(--logo-gray);color:#fff">gray<small>#7c7c7c</small></div>
-        <div class="sw" style="background:var(--logo-silver);color:#181716">silver<small>#d3d3d3</small></div>
-      </div>
-      <p class="hint">Render the mono logo in a single color (currentColor) so it picks ink on light / silver on dark.</p>
-
-      <h2>5. Components (and their Tailwind classes)</h2>
-      <div class="row" style="gap:28px">
-        <div class="demo"><button class="btn btn-ink">Post a job</button><span class="u">bg-ink text-white</span></div>
-        <div class="demo"><button class="btn btn-action">Apply</button><span class="u">bg-action text-white</span></div>
-        <div class="demo"><button class="btn btn-outline">Save</button><span class="u">border border-default text-default</span></div>
-        <div class="demo"><span class="badge">vue.js</span><span class="u">text-jobsy-700 border-jobsy-500/45</span></div>
-        <div class="demo"><span class="badge positive">new</span><span class="u">text-positive border-positive</span></div>
-        <div class="demo"><span class="badge negative">draft</span><span class="u">text-negative border-negative</span></div>
+      <h2 class="font-display text-xs uppercase tracking-wider text-[var(--muted)] mt-9 mb-3.5 font-semibold">2. Action &amp; status</h2>
+      <div class="flex gap-2 flex-wrap">
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-orange text-white">orange<small class="font-normal opacity-80">#fc6600</small></div>
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-action text-white">action<small class="font-normal opacity-80">bg-action</small></div>
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-positive text-white">positive<small class="font-normal opacity-80">text-positive</small></div>
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-negative text-white">negative<small class="font-normal opacity-80">text-negative</small></div>
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-ink text-white">ink<small class="font-normal opacity-80">bg-ink</small></div>
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-white text-[#181716] border border-black/10">white<small class="font-normal opacity-80">--surface</small></div>
       </div>
 
-      <h2>6. Card &amp; typography</h2>
-      <div class="card" style="padding:24px;max-width:560px">
-        <p>
-          <span style="font-family:var(--jobsy-font-display);font-size:24px;font-weight:800;letter-spacing:-.02em">
-            Display heading - Sora
-          </span>
-          <span class="u">font-display</span>
-        </p>
-        <p>
-          <span style="font-size:16px;line-height:1.6;margin:12px 0 0">
-            Body text in Inter - the default for descriptions and longer content. Comfortable line-height, neutral weight.
-          </span>
-          <span class="u">font-sans</span>
-        </p>
-        <p>
-          <span style="color:var(--positive);font-weight:600;font-size:14px">
-            130 - 160 PLN <span style="color:var(--muted);font-weight:400">net/h, B2B</span>
-          </span>
-          <span class="u">text-positive</span>
-        </p>
-        <p>
-          <span style="font-size:12px;color:var(--muted);margin:12px 0 0">
-            Caption / note - small summary.
-          </span>
-          <span class="u">text-xs text-muted</span>
-        </p>
-        <div class="row" style="margin-top:20px">
-          <button class="btn btn-action">Action</button>
-          <button class="btn btn-outline">Secondary</button>
+      <h2 class="font-display text-xs uppercase tracking-wider text-[var(--muted)] mt-9 mb-3.5 font-semibold">3. Surfaces &amp; neutrals</h2>
+      <div class="flex gap-2 flex-wrap">
+        <div class="w-[118px] h-[60px] rounded-lg flex items-end justify-center pb-1 text-[10px] font-semibold border border-black/5 bg-[var(--bg)] text-[var(--text)]">bg</div>
+        <div class="w-[118px] h-[60px] rounded-lg flex items-end justify-center pb-1 text-[10px] font-semibold border border-black/5 bg-[var(--surface)] text-[var(--text)]">surface</div>
+        <div class="w-[118px] h-[60px] rounded-lg flex items-end justify-center pb-1 text-[10px] font-semibold border border-black/5 bg-[var(--elevated)] text-[var(--text)]">elevated</div>
+        <div class="w-[118px] h-[60px] rounded-lg flex items-end justify-center pb-1 text-[10px] font-semibold border border-black/5 bg-[var(--border)] text-[var(--text)]">border</div>
+        <div class="w-[118px] h-[60px] rounded-lg flex items-end justify-center pb-1 text-[10px] font-semibold bg-[var(--muted)] text-white">muted</div>
+        <div class="w-[118px] h-[60px] rounded-lg flex items-end justify-center pb-1 text-[10px] font-semibold bg-[var(--text)] text-[var(--bg)]">text</div>
+      </div>
+      <p class="text-xs text-[var(--muted)] mt-1.5">Surfaces używaj jako arbitrary value (<code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">bg-[var(--surface)]</code>) albo semantyki Nuxt UI (<code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">bg-default</code>) na web.</p>
+
+      <h2 class="font-display text-xs uppercase tracking-wider text-[var(--muted)] mt-9 mb-3.5 font-semibold">4. Mono logo (grayscale)</h2>
+      <div class="flex gap-2 flex-wrap">
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-[var(--logo-graphite)] text-white">graphite<small class="font-normal opacity-80">#191919</small></div>
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-[var(--logo-gray)] text-white">gray<small class="font-normal opacity-80">#7c7c7c</small></div>
+        <div class="w-[118px] h-[60px] rounded-lg flex flex-col justify-end items-center pb-1 text-[10px] font-semibold bg-[var(--logo-silver)] text-[#181716]">silver<small class="font-normal opacity-80">#d3d3d3</small></div>
+      </div>
+
+      <h2 class="font-display text-xs uppercase tracking-wider text-[var(--muted)] mt-9 mb-3.5 font-semibold">5. Components</h2>
+      <div class="flex gap-7 flex-wrap items-start">
+        <div class="flex flex-col gap-1.5 items-start"><button class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-jobsy bg-ink text-white text-sm font-semibold">Post a job</button><code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">bg-ink text-white rounded-jobsy</code></div>
+        <div class="flex flex-col gap-1.5 items-start"><button class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-jobsy bg-action text-white text-sm font-semibold">Apply</button><code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">bg-action text-white rounded-jobsy</code></div>
+        <div class="flex flex-col gap-1.5 items-start"><button class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-jobsy border border-[var(--border)] text-[var(--text)] text-sm font-semibold">Save</button><code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">border rounded-jobsy</code></div>
+      </div>
+      <div class="flex gap-3 flex-wrap items-center mt-4">
+        <span class="inline-flex items-center px-2 py-0.5 rounded-jobsy-sm text-[13px] font-medium text-jobsy-700 border border-jobsy-500/45 bg-jobsy-500/[0.07]">vue.js</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-jobsy-sm text-[13px] font-medium text-positive border border-positive/45 bg-positive/10">new</span>
+        <span class="inline-flex items-center px-2 py-0.5 rounded-jobsy-sm text-[13px] font-medium text-white bg-negative border border-negative/45">draft</span>
+      </div>
+
+      <h2 class="font-display text-xs uppercase tracking-wider text-[var(--muted)] mt-9 mb-3.5 font-semibold">6. Card &amp; typography</h2>
+      <div class="rounded-jobsy-lg border border-[var(--border)] bg-[var(--surface)] p-6 max-w-[560px]">
+        <p class="font-display text-2xl font-extrabold tracking-tight m-0">Display heading - Sora <code class="font-mono text-[13px] bg-[var(--elevated)] px-1.5 py-0.5 rounded font-normal align-middle">font-display</code></p>
+        <p class="text-base leading-relaxed mt-3 mb-0">Body text in Inter - the default for descriptions and longer content. Comfortable line-height, neutral weight. <code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">font-sans</code></p>
+        <p class="text-xs text-[var(--muted)] mt-3 mb-0">Caption / note - small summary. <code class="font-mono text-xs bg-[var(--elevated)] px-1.5 py-0.5 rounded">text-xs</code></p>
+        <div class="flex gap-2.5 mt-5">
+          <button class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-jobsy bg-action text-white text-sm font-semibold">Action</button>
+          <button class="inline-flex items-center justify-center gap-2 px-4 py-2.5 rounded-jobsy border border-[var(--border)] text-[var(--text)] text-sm font-semibold">Secondary</button>
         </div>
       </div>
 
-      <h2 id="usage">Usage</h2>
-      <div class="usage">
-<pre>/* web (Nuxt UI) - main.css */
+      <h2 id="usage" class="font-display text-xs uppercase tracking-wider text-[var(--muted)] mt-9 mb-3.5 font-semibold">Usage</h2>
+      <div class="rounded-jobsy-lg border border-[var(--border)] bg-[var(--surface)] p-4 overflow-auto">
+<pre class="m-0 whitespace-pre-wrap font-mono text-[12.5px] leading-relaxed">/* web (Nuxt UI) - main.css */
 @import "tailwindcss";
 @import "@nuxt/ui";
 @import "@jobsy-it/design/theme.css";
 
-/* other - style.css */
-@import "tailwindcss";
-@import "@jobsy-it/design/theme.css";
+/* chrome extension, NO build - just link the compiled file */
+&lt;link rel="stylesheet" href="jobsy.css"&gt;   /* from @jobsy-it/design/jobsy.css */
 
-// Build buttons with utilities on the shared tokens:
-// &lt;button class="bg-action text-white px-4 py-2 font-semibold"&gt;Apply&lt;/button&gt;</pre>
+/* chrome extension WITH build (WXT) - on-demand utilities */
+@import "tailwindcss";
+@import "@jobsy-it/design/theme.css";</pre>
       </div>
+
     </div>
   </body>
 </html>
