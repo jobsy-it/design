@@ -1,8 +1,7 @@
 /**
  * jobsy.it - design tokens
  *
- * Plain CSS variables. Consumed by the Nuxt app (theme.css → Tailwind v4 / Nuxt UI),
- * the Chrome extension, and anything else.
+ * Plain CSS variables. Consumed by the Nuxt app (theme.css → Tailwind v4 Nuxt UI), the Chrome extension (plain HTML), and anything else.
  *
  * Layers:
  * 1. Brand scale (amber) - fixed palette, used by Nuxt UI
