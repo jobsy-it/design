@@ -1,12 +1,13 @@
 /**
  * jobsy.it - design tokens
  *
- * Plain CSS variables. Consumed by the Nuxt app (theme.css → Tailwind v4 Nuxt UI), the Chrome extension (plain HTML), and anything else.
+ * Plain CSS variables. Consumed by the Nuxt app (theme.css → Tailwind v4 / Nuxt UI),
+ * the Chrome extension, and anything else.
  *
  * Layers:
  * 1. Brand scale (amber) - fixed palette, used by Nuxt UI
  * 2. Fixed brand colors - orange accent, ink, mono-logo grays
- * 3. Semantic tokens (light/dark) - flip with the .dark class
+ * 3. Semantic tokens (light)
  */
 :root {
   --jobsy-50: #fff9e6;
@@ -52,23 +53,4 @@
 
   --positive: #16a34a;
   --negative: #ff0000;
-}
-
-.dark {
-  --bg: #16202e;
-  --surface: #1c2838;
-  --elevated: #243449;
-  --text: #f1f5f9;
-  --muted: #94a3b8;
-  --border: #2c3e54;
-
-  --primary: var(--jobsy-400);
-  --primary-hover: var(--jobsy-300);
-  --on-primary: var(--jobsy-ink);
-
-  --action: #f5801f;
-  --action-hover: #e0640a;
-  --on-action: #ffffff;
-
-  --positive: #4ade80;
 }
