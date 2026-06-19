@@ -12,7 +12,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "tailwindcss -i input.css -o dist/jobsy.css --minify"
+    "build": "tailwindcss -i main.css -o dist/jobsy.css --minify"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0",
