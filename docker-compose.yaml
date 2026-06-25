@@ -1,0 +1,10 @@
+name: "jobsy-design"
+services:
+  app:
+    image: ghcr.io/jobsy-it/ui:1.1-dev
+    platform: linux/amd64
+    volumes:
+      - ".:/usr/src"
+    ports:
+      - "3300:3000"
+    tty: true
