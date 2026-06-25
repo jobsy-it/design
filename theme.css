@@ -23,6 +23,7 @@
   --color-ink: var(--jobsy-ink);
   --color-orange: var(--jobsy-orange);
   --color-action: var(--action);
+  --color-action-hover: var(--action-hover);
   --color-positive: var(--positive);
   --color-negative: var(--negative);
 
