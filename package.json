@@ -1,5 +1,6 @@
 {
   "name": "@jobsy-it/design",
+  "version": "1.0.0",
   "private": false,
   "exports": {
     "./tokens.css": "./tokens.css",
@@ -12,7 +13,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "tailwindcss -i main.css -o dist/jobsy.css --minify"
+    "build": "tailwindcss -i main.css -o dist/jobsy.css --minify",
+    "version": "npm run build && git add dist"
   },
   "devDependencies": {
     "@tailwindcss/cli": "^4.0.0",
